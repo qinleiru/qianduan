@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<script type="text/javascript" src="http://webapp.didistatic.com/static/webapp/shield/z/vue/vue/1.0.24/vue.min.js"></script>
+<body>
+	<div id="example">
+		<p v-if="greeting">我是对的</p>
+		<p v-else="greeting">我是错的</p><!--虽然v-if与v-show都可以，但是不建议v-show 对于v-show使用v-show="!greeting"-->
+	</div>
+	<script type="text/javascript">
+		new Vue({
+			el:"#example",
+			data:{
+				greeting:true  //因为为false所以 不显示
+			}
+		})
+	</script>
+</body>
